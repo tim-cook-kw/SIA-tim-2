@@ -12,14 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
-
-Auth::routes();
-
-Route::get('/superadmin', 'SuperAdminController@index')->name('superadmin')->middleware('superadmin');
-Route::get('/admin', 'AdminController@index')->name('admin')->middleware('admin');
-Route::get('/teacher', 'TeacherController@index')->name('teacher')->middleware('teacher');
-Route::get('/student', 'StudentController@index')->name('student')->middleware('student');
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard/admin', function () {
+    return view('admin.dashboard');
+});
