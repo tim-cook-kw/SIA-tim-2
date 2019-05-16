@@ -1,4 +1,4 @@
-@extends('layouts.admin.master')
+@extends('layouts.teacher.master')
 @section('content')
 <div class="main-content" id="content-wrapper">
 				<div class="container-fluid">
@@ -11,16 +11,16 @@
 									<div class="stat-item">
 										<div class="stats">
 											<div class="col-xs-8 count">
-												<h1>199</h1>
-												<p>STUDENTS</p>
+												<h1>999</h1>
+												<p>ASSIGNMENTS</p>
 											</div>
 											<div class="col-xs-4 icon">
-												<i class="fa fa-users ex-icon"></i>
+												<i class="fa fa-code ex-icon"></i>
 											</div>
 											<div class="clearfix"></div>
 										</div>
 										<div class="status">
-											<p class="text-ex"><i class="fa fa-pencil-square-o"></i>10 Absent Today</p>
+											<p class="text-ex"><i class="fa fa-pencil-square-o"></i>1 Submission Tomorrow</p>
 										</div>
 										<div class="clearfix"></div>
 									</div>
@@ -29,16 +29,16 @@
 									<div class="stat-item">
 										<div class="stats">
 											<div class="col-xs-8 count">
-												<h1>111</h1>
-												<p>TEACHERS</p>
+												<h1>65.8%</h1>
+												<p>ATTENDENCE</p>
 											</div>
 											<div class="col-xs-4 icon">
-												<i class="fa fa-user-secret danger-icon"></i>
+												<i class="fa fa-line-chart danger-icon"></i>
 											</div>
 											<div class="clearfix"></div>
 										</div>
 										<div class="status">
-											<p class="text-danger"><i class="fa fa-exclamation-triangle"></i>5 On Leave Today</p>
+											<p class="text-danger"><i class="fa fa-exclamation-triangle"></i>Below 70%</p>
 										</div>
 										<div class="clearfix"></div>
 									</div>
@@ -88,97 +88,10 @@
 							<div class="col-sm-8">
 								<div>
 									<div class="my-msg dash-item">
-										<h6 class="item-title"><i class="fa fa-bar-chart"></i>STUDENT ATTENDENCE TREND</h6>
-										<div class="inner-item">
-											<div class="summary-chart">
-												<canvas id="studentAttendenceLine" height="100px"></canvas>
-												<div class="chart-legends">
-													<span class="red">ABSENT</span>
-													<span class="orange">ON LEAVE</span>
-													<span class="green">PRESENT</span>
-												</div>
-												<div class="chart-title">
-													<h6 class="bottom-title">STUDENT ATTENDENCE TREND</h6>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-4">
-								<div>
-									<div class="my-msg dash-item">
-										<h6 class="item-title"><i class="fa fa-calendar"></i>TODAY'S TASK</h6>
-										<div class="inner-item">
-											<div class="timetable-item">
-												<div class="col-xs-3 clear-padding">
-													<p><span class="time">10 AM</span></p>
-												</div>
-												<div class="col-xs-9">
-													<p class="title">Teacher Meeting</p>
-													<p class="sent-by"><i class="fa fa-map-marker"></i> ROOM NO - 601</p>
-												</div>
-												<div class="clearfix"></div>
-											</div>
-											<div class="timetable-item">
-												<div class="col-xs-3 clear-padding">
-													<p><span class="time">11 AM</span></p>
-												</div>
-												<div class="col-xs-9">
-													<p class="title">Campus Tour</p>
-													<p class="sent-by"><i class="fa fa-map-marker"></i> CAMPUS</p>
-
-												</div>
-												<div class="clearfix"></div>
-											</div>
-											<div class="timetable-item">
-												<div class="col-xs-3 clear-padding">
-													<p><span class="time">12 PM</span></p>
-												</div>
-												<div class="col-xs-9">
-													<p class="title">Parent Meeting</p>
-													<p class="sent-by"><i class="fa fa-map-marker"></i> ROOM NO - 601</p>
-
-												</div>
-												<div class="clearfix"></div>
-											</div>
-											<div class="timetable-item">
-												<div class="col-xs-3 clear-padding">
-													<p><span class="time">01 PM</span></p>
-												</div>
-												<div class="col-xs-9">
-													<p class="title">Guest Lecture</p>
-													<p class="sent-by"><i class="fa fa-map-marker"></i> ROOM NO - 601</p>
-
-												</div>
-												<div class="clearfix"></div>
-											</div>
-											<div class="timetable-item">
-												<div class="col-xs-3 clear-padding">
-													<p><span class="time">02 PM</span></p>
-												</div>
-												<div class="col-xs-9">
-													<p class="title">Teacher Meeting</p>
-													<p class="sent-by"><i class="fa fa-map-marker"></i> ROOM NO - 601</p>
-												</div>
-												<div class="clearfix"></div>
-											</div>
-
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-lg-12 clear-padding-xs">
-							<div class="col-sm-8">
-								<div>
-									<div class="my-msg dash-item">
 										<h6 class="item-title"><i class="fa fa-bar-chart"></i>TODAY'S STUDENT ATTENDENCE</h6>
 										<div class="inner-item">
 											<div class="summary-chart">
-												<canvas id="studentAttendenceBar" height="100px"></canvas>
+												<canvas id="studentAttendenceBar"></canvas>
 												<div class="chart-legends">
 													<span class="red">ABSENT</span>
 													<span class="orange">ON LEAVE</span>
@@ -192,17 +105,56 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-md-4">
+							<div class="col-sm-4">
 								<div>
 									<div class="my-msg dash-item">
-										<h6 class="item-title"><i class="fa fa-pie-chart"></i>TEACHER ATTENDENCE</h6>
-										<div class="chart-item">
-											<canvas id="studentPie" height = 250px></canvas>
-											<div class="chart-legends">
-												<span class="red">ABSENT</span>
-												<span class="orange">PRESENT</span>
-												<span class="green">LEAVE</span>
+										<h6 class="item-title"><i class="fa fa-calendar"></i>TODAY'S TIMETABLE</h6>
+										<div class="inner-item">
+											<div class="timetable-item">
+												<div class="col-xs-3 clear-padding">
+													<p><span class="time">10 AM</span></p>
+												</div>
+												<div class="col-xs-9">
+													<p class="title">Mathematics (MTH101)</p>
+													<p class="sent-by"><i class="fa fa-map-marker"></i> ROOM NO - 601</p>
+													<p class="class-teacher"><i class="fa fa-user"></i> JOHN DOE</p>
+												</div>
+												<div class="clearfix"></div>
 											</div>
+											<div class="timetable-item">
+												<div class="col-xs-3 clear-padding">
+													<p><span class="time">11 AM</span></p>
+												</div>
+												<div class="col-xs-9">
+													<p class="title">Physics (PHY202)</p>
+													<p class="sent-by"><i class="fa fa-map-marker"></i> ROOM NO - 601</p>
+													<p class="class-teacher"><i class="fa fa-user"></i> JOHN DOE</p>
+												</div>
+												<div class="clearfix"></div>
+											</div>
+											<div class="timetable-item">
+												<div class="col-xs-3 clear-padding">
+													<p><span class="time">12 PM</span></p>
+												</div>
+												<div class="col-xs-9">
+													<p class="title">Biology (BIO101)</p>
+													<p class="sent-by"><i class="fa fa-map-marker"></i> ROOM NO - 601</p>
+													<p class="class-teacher"><i class="fa fa-user"></i> JOHN DOE</p>
+												</div>
+												<div class="clearfix"></div>
+											</div>
+											<div class="timetable-item">
+												<div class="col-xs-3 clear-padding">
+													<p><span class="time">01 PM</span></p>
+												</div>
+												<div class="col-xs-9">
+													<p class="title">MATH (MTH101)</p>
+													<p class="sent-by"><i class="fa fa-map-marker"></i> ROOM NO - 601</p>
+													<p class="class-teacher"><i class="fa fa-user"></i> JOHN DOE</p>
+												</div>
+												<div class="clearfix"></div>
+											</div>
+											
 										</div>
 									</div>
 								</div>
@@ -211,7 +163,7 @@
 					</div>
 					<div class="row">
 						<div class="col-lg-12 clear-padding-xs">
-							<div class="col-md-12">
+							<div class="col-md-8">
 								<div class="my-msg dash-item">
 									<h6 class="item-title"><i class="fa fa-bullhorn"></i>ANNOUNCEMENTS</h6>
 									<div class="inner-item dashboard-tabs">
@@ -219,10 +171,10 @@
 											<li class="active">
 												<a  href="#1" data-toggle="tab"><i class="fa fa-graduation-cap"></i><span>ACADEMICS</span></a>
 											</li>
-											<li>
+											<li>								
 												<a href="#2" data-toggle="tab"><i class="fa fa-users"></i><span>ADMISSIONS</span></a>
 											</li>
-											<li>
+											<li>								
 												<a href="#3" data-toggle="tab"><i class="fa fa-trophy"></i><span>SPORTS</span></a>
 											</li>
 										</ul>
@@ -261,6 +213,21 @@
 									</div>
 								</div>
 							</div>
+							<div class="col-md-4">
+								<div>
+									<div class="my-msg dash-item">
+										<h6 class="item-title"><i class="fa fa-pie-chart"></i>STUDENTS</h6>
+										<div class="chart-item">
+											<canvas id="studentPie" height = 200px></canvas>
+											<div class="chart-legends">
+												<span class="red">ABSENT</span>
+												<span class="orange">PRESENT</span>
+												<span class="green">LEAVE</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -271,4 +238,4 @@
 					<p>Copyright Pathshala</p>
 				</div>
 			</div>
-@endsection
+        @endsection
