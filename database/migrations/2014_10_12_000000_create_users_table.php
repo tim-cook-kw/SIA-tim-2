@@ -23,6 +23,8 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+
+        DB::unprepared('CREATE PROCEDURE readDB() BEGIN SELECT id, name, role FROM users; END');
     }
 
     /**
@@ -33,5 +35,6 @@ class CreateUsersTable extends Migration
     public function down()
     {
         Schema::dropIfExists('users');
+        $this->readDB('DROP PROCEDURE IF EXISTS foo');
     }
 }
