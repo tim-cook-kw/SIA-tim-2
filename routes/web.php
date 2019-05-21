@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 //admin
 
-Route::get('/dashboard/admin/dashboard', function () {
+Route::get('/dashboard/admin/index', function () {
     return view('admin.dashboard');
 });
 
@@ -51,6 +51,10 @@ Route::get('/dashboard/admin/classtimetable', function () {
 
 Route::get('/dashboard/admin/createtimetable', function () {
     return view('admin.create-timetable');
+});
+
+Route::get('/dashboard/admin/teacherattendencereport', function () {
+    return view('teacher.attendence-report');
 });
 
 
