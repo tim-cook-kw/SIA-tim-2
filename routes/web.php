@@ -28,96 +28,97 @@ Route::get('/student', 'StudentController@index')->name('student')->middleware('
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/dashboard/admin/index', function () {
+Route::get('/admin/index', function () {
     return view('admin.dashboard');
 });
-Route::get('/dashboard/admin/addstudent', function () {
+Route::get('/admin/addstudent', function () {
     return view('admin.add-student');
 });
-Route::get('/dashboard/admin/addteacher', function () {
+Route::get('/admin/addteacher', function () {
     return view('admin.add-student');
 });
-Route::get('/dashboard/admin/addsubject', function () {
+Route::get('/admin/addsubject', function () {
     return view('admin.add-subject');
 });
-Route::get('/dashboard/admin/addsection', function () {
+Route::get('/admin/addsection', function () {
     return view('admin.add-section');
 });
-Route::get('/dashboard/admin/addclass', function () {
+Route::get('/admin/addclass', function () {
     return view('admin.add-class');
 });
-Route::get('/dashboard/admin/addannouncement', function () {
+Route::get('/admin/addannouncement', function () {
     return view('admin.add-announcement');
 });
-Route::get('/dashboard/admin/classtimetable', function () {
+Route::get('/admin/classtimetable', function () {
     return view('admin.class-timetable');
 });
-Route::get('/dashboard/admin/createtimetable', function () {
+Route::get('/admin/createtimetable', function () {
     return view('admin.create-timetable');
 });
 
-Route::get('/dashboard/admin/teacherattendencereport', function () {
+Route::get('/admin/teacherattendencereport', function () {
     return view('teacher.attendence-report');
 });
 
 
 //student
-Route::get('/dashboard/student/attendence', function() {
+Route::get('/student/attendence', function() {
     return view('student.attendence');
 });
-Route::get('/dashboard/student/attendencedetail', function() {
+Route::get('/student/attendencedetail', function() {
     return view('student.attendence-detailed');
 });
-Route::get('/dashboard/student/assignmentdownload', function() {
+Route::get('/student/assignmentdownload', function() {
     return view('student.assignment-download');
 });
-Route::get('/dashboard/student/assignmentupload', function() {
+Route::get('/student/assignmentupload', function() {
     return view('student.assignment-upload');
 });
-Route::get('/dashboard/student/examplan', function() {
+Route::get('/student/examplan', function() {
     return view('student.exam-plan');
 });
-Route::get('/dashboard/student/examschedule', function() {
+Route::get('/student/examschedule', function() {
     return view('student.exam-schedule');
 });
-Route::get('/dashboard/student/fees', function() {
+Route::get('/student/fees', function() {
     return view('student.fees');
 });
-Route::get('/dashboard/student/marks', function() {
+Route::get('/student/marks', function() {
     return view('student.marks');
 });
+
 //teacher
-Route::get('/dashboard/teacher/dashboard', function() {
+Route::get('/teacher/index', function() {
     return view('teacher.dashboard');
 });
-Route::get('/dashboard/teacher/addstudentmarks', function() {
+Route::get('/teacher/addstudentmarks', function() {
     return view('teacher.add-student-marks');
 });
-Route::get('/dashboard/teacher/assignmentdownload', function() {
+Route::get('/teacher/assignmentdownload', function() {
     return view('teacher.assignment-download');
 });
-Route::get('/dashboard/teacher/attendencereport', function() {
+Route::get('/teacher/attendencereport', function() {
     return view('teacher.attendence-report');
 });
-Route::get('/dashboard/teacher/createassignment', function() {
+Route::get('/teacher/createassignment', function() {
     return view('teacher.create-assignment');
 });
-Route::get('/dashboard/teacher/marksreport', function() {
+Route::get('/teacher/marksreport', function() {
     return view('teacher.marks-report');
 });
-Route::get('/dashboard/teacher/attendencereport', function() {
+Route::get('/teacher/attendencereport', function() {
     return view('teacher.attendence-report');
 });
-Route::get('/dashboard/teacher/marksstudentattendence', function() {
+Route::get('/teacher/marksstudentattendence', function() {
     return view('teacher.marks-student-attendence');
 });
-Route::get('/dashboard/teacher/timetable', function() {
+Route::get('/teacher/timetable', function() {
     return view('teacher.timetable');
 });
-Route::get('/dashboard/teacher/viewstudentattendence', function() {
+Route::get('/teacher/viewstudentattendence', function() {
     return view('teacher.view-student-attendence');
 });
-Route::get('/dashboard/teacher/viewstudentmarks', function() {
+Route::get('/teacher/viewstudentmarks', function() {
     return view('teacher.view-student-marks');
 });
 
