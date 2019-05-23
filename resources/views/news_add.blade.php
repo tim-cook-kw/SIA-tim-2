@@ -23,7 +23,7 @@
  
                         <div class="form-group">
                             <label>News</label>
-                            <input type="textarea" name="news" class="form-control" placeholder="Add News ..">
+                            <textarea rows ="8" name="news" class="form-control" placeholder="Add News .."></textarea>
  
                             @if($errors->has('news'))
                                 <div class="text-danger">
