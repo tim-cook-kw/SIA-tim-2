@@ -19,6 +19,10 @@ Route::get('/', function () {
     return view('login.login');
 });
 
+Route::get('/welcome', function () {
+    return view('welcome');
+});
+
 Auth::routes();
 
 Route::get('/superadmin', 'SuperAdminController@index')->name('superadmin')->middleware('superadmin');
@@ -28,7 +32,7 @@ Route::get('/student', 'StudentController@index')->name('student')->middleware('
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/admin/index', function () {
+Route::get('/admin/dashboard', function () {
     return view('admin.dashboard');
 });
 Route::get('/admin/addstudent', function () {
@@ -88,7 +92,7 @@ Route::get('/student/marks', function() {
 });
 
 //teacher
-Route::get('/teacher/index', function() {
+Route::get('/teacher/dashboard', function() {
     return view('teacher.dashboard');
 });
 Route::get('/teacher/addstudentmarks', function() {
