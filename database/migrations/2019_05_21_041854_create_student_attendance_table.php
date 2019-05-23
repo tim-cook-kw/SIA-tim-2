@@ -15,6 +15,14 @@ class CreateStudentAttendanceTable extends Migration
     {
         Schema::create('student_attendance', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('id_student')->unsigned();
+            $table->string('course', 20);
+            $table->date('date');
+            $table->time('time_start');
+            $table->time('time_finish');
+            $table->string('status', 20);
+            $table->string('teacher_name', 50);
+            $table->boolean('attendance_block')->nullable()->default(false);
             $table->timestamps();
         });
     }
