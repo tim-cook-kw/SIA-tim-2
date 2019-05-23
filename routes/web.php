@@ -11,8 +11,12 @@
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('login.login');
 });
 
 Auth::routes();
@@ -115,4 +119,8 @@ Route::get('/dashboard/teacher/viewstudentattendence', function() {
 });
 Route::get('/dashboard/teacher/viewstudentmarks', function() {
     return view('teacher.view-student-marks');
+});
+
+Route::get('/login2', function() {
+    return view('login.login');
 });
