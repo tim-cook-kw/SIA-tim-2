@@ -24,8 +24,7 @@ Route::get('/student', 'StudentController@index')->name('student')->middleware('
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-//admin
-Route::get('/dashboard/admin/dashboard', function () {
+Route::get('/dashboard/admin/index', function () {
     return view('admin.dashboard');
 });
 Route::get('/dashboard/admin/addstudent', function () {
@@ -52,6 +51,12 @@ Route::get('/dashboard/admin/classtimetable', function () {
 Route::get('/dashboard/admin/createtimetable', function () {
     return view('admin.create-timetable');
 });
+
+Route::get('/dashboard/admin/teacherattendencereport', function () {
+    return view('teacher.attendence-report');
+});
+
+
 //student
 Route::get('/dashboard/student/attendence', function() {
     return view('student.attendence');

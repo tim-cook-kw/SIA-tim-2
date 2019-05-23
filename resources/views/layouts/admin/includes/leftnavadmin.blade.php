@@ -91,10 +91,10 @@
 						</a>
 						<ul class="dropdown-menu">
 							<li>
-								<a href="teacherattendence-report"><i class="fa fa-caret-right"></i>ATTENDENCE</a>
+								<a href="teacherattendencereport"><i class="fa fa-caret-right"></i>ATTENDENCE</a>
 							</li>
 							<li>
-								<a href="teachermarks-report"><i class="fa fa-caret-right"></i>MARKS</a>
+								<a href="teachermarksreport"><i class="fa fa-caret-right"></i>MARKS</a>
 							</li>
 						</ul>
 						<div class="clearfix"></div>
