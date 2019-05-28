@@ -11,8 +11,12 @@
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('login.login');
 });
 
 Auth::routes();
@@ -52,9 +56,8 @@ Route::get('/dashboard/admin/createtimetable', function () {
     return view('admin.create-timetable');
 });
 
-Route::get('/dashboard/admin/teacherattendencereport', function () {
-    return view('teacher.attendence-report');
-});
+Route::get('/dashboard/admin/studentattendencereport', 'AttendanceController@index');
+
 
 
 //student
@@ -115,4 +118,12 @@ Route::get('/dashboard/teacher/viewstudentattendence', function() {
 });
 Route::get('/dashboard/teacher/viewstudentmarks', function() {
     return view('teacher.view-student-marks');
+});
+
+Route::get('/dashboard/admin/login/', function() {
+    return view('login.login');
+});
+
+Route::get('/login2', function() {
+    return view('login.login');
 });
