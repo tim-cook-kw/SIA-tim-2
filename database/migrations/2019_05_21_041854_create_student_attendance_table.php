@@ -23,8 +23,15 @@ class CreateStudentAttendanceTable extends Migration
         });
 
         DB::unprepared(
-        'DROP PROCEDURE IF EXISTS SelectAllAttendance; CREATE PROCEDURE SelectAllAttendance() BEGIN SELECT * FROM student_attendance; END'
+        'DROP PROCEDURE IF EXISTS SelectAllAttendance; CREATE PROCEDURE SelectAllAttendance() BEGIN SELECT * FROM student_attendance; END;'
         );
+        DB::unprepared(
+        'DROP PROCEDURE IF EXISTS SelectAllAttWhereStudentName;  CREATE PROCEDURE SelectAllAttWhereStudentName(IN studentname VARCHAR(50)) BEGIN SELECT * FROM student_attendance WHERE student = studentname; END;'
+        );
+        DB::unprepared(
+            'DROP PROCEDURE IF EXISTS InsertAttendance;  CREATE PROCEDURE InsertAttendance(IN sName VARCHAR(50), IN sDate DATE, IN sStatus VARCHAR(20)) BEGIN INSERT INTO student_attendance (student, date, status) VALUES (sName, sDate, sStatus); END;'
+        );
+
     }
 
     /**

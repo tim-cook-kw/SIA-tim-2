@@ -4,14 +4,14 @@
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-lg-12 clear-padding-xs">
-							<h5 class="page-title"><i class="fa fa-pencil-square-o"></i>MARK ATTENDENCE</h5>
+							<h5 class="page-title"><i class="fa fa-pencil-square-o"></i>ATTENDENCE LIST</h5>
 							<div class="section-divider"></div>
 						</div>
-					</div>
+                    </div>
 					<div class="row">
 						<div class="col-lg-12 clear-padding-xs">
 							<div class="col-lg-12">
-								<div class="dash-item first-dash-item">
+								<div class="dash-item">
 									<h6 class="item-title"><i class="fa fa-search"></i>MAKE SELECTION</h6>
 									<div class="inner-item dash-search-form">
 										<div class="col-md-3 col-sm-6">
@@ -96,10 +96,6 @@
                                                     </tr> --}}
 											</tbody>
 										</table>
-										<div class="table-action-box">
-											<a href="#" class="save"><i class="fa fa-check"></i>MARK</a>
-											<a href="#" class="cancel"><i class="fa fa-ban"></i>CANCEL</a>
-										</div>
 									</div>
 								</div>
 							</div>

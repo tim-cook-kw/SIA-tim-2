@@ -9,14 +9,60 @@ use Illuminate\Http\Request;
 
 class AttendanceController extends Controller
 {
-    public function index()
+    //select
+    public function indexAdmin()
     {
         $model = new Attendance();
-            $allattendance = DB::select(
+            $allAdmattendance = DB::select(
                 'call SelectAllAttendance()'
             );
 
-        return view('admin.marks-student-attendence', ['attendances' => $allattendance]);
+        return view('admin.student-attendence-list', ['attendances' => $allAdmattendance]);
+    }
+
+
+
+    public function addAdmin()
+    {
+
+
+        return view('admin.add-student-attendence');
+    }
+
+    public function saveAdmin(Request $request){
+        $model = new Attendance();
+        DB::insert(
+            'call InsertAttendance(?,?,?)',
+            [
+                $request->input('name'),
+                $request->input('date'),
+                $request->input('status'),
+            ]
+        );
+        return redirect('/dashboard/admin/studentattendencereport');
+        }
+
+    public function indexStudent()
+    {
+        $studentname = "fajar";
+        $model = new Attendance();
+
+            $allStdnattendance = DB::select(
+
+                'call SelectAllAttWhereStudentName(?)', [$studentname]
+            );
+
+        return view('student.attendence', ['studentatt' => $allStdnattendance]);
+    }
+
+    public function indexTeacher()
+    {
+        $model = new Attendance();
+        $allTchrattendance = DB::select(
+            'call SelectAllAttendance()'
+        );
+
+    return view('admin.marks-student-attendence', ['attendances' => $allTchrattendance]);
     }
 
     // public function add()
