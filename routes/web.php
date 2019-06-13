@@ -56,14 +56,14 @@ Route::get('/dashboard/admin/createtimetable', function () {
     return view('admin.create-timetable');
 });
 
-Route::get('/dashboard/admin/studentattendencereport', 'AttendanceController@index');
-
+Route::get('/dashboard/admin/studentattendencereport', 'AttendanceController@indexAdmin');
+Route::get('/dashboard/admin/addstudentattendence', 'AttendanceController@addAdmin');
+Route::post('/dashboard/admin/savestudentattendence', 'AttendanceController@saveAdmin');
+Route::get('/dashboard/student/attendence', 'AttendanceController@indexStudent');
 
 
 //student
-Route::get('/dashboard/student/attendence', function() {
-    return view('student.attendence');
-});
+
 Route::get('/dashboard/student/attendencedetail', function() {
     return view('student.attendence-detailed');
 });
