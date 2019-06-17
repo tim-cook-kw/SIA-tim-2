@@ -42,6 +42,26 @@ class AttendanceController extends Controller
         return redirect('/dashboard/admin/studentattendencereport');
         }
 
+        public function editAdmin()
+    {
+
+
+        return view('admin.add-student-attendence');
+    }
+
+    public function saveEditAdmin(Request $request){
+        $model = new Attendance();
+        DB::insert(
+            'call InsertAttendance(?,?,?)',
+            [
+                $request->input('name'),
+                $request->input('date'),
+                $request->input('status'),
+            ]
+        );
+        return redirect('/dashboard/admin/studentattendencereport');
+        }
+
     public function indexStudent()
     {
         $studentname = "fajar";

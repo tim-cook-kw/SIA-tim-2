@@ -58,8 +58,11 @@ Route::get('/dashboard/admin/createtimetable', function () {
 
 Route::get('/dashboard/admin/studentattendencereport', 'AttendanceController@indexAdmin');
 Route::get('/dashboard/admin/addstudentattendence', 'AttendanceController@addAdmin');
-Route::post('/dashboard/admin/savestudentattendence', 'AttendanceController@saveAdmin');
+Route::get('/dashboard/admin/editstudentattendence/{id}', 'AttendanceController@addAdmin');
 Route::get('/dashboard/student/attendence', 'AttendanceController@indexStudent');
+Route::post('/dashboard/admin/saveeditstudentattendence/{id}', '');
+Route::post('/dashboard/admin/savestudentattendence', 'AttendanceController@saveAdmin');
+
 
 
 //student

@@ -31,6 +31,9 @@ class CreateStudentAttendanceTable extends Migration
         DB::unprepared(
             'DROP PROCEDURE IF EXISTS InsertAttendance;  CREATE PROCEDURE InsertAttendance(IN sName VARCHAR(50), IN sDate DATE, IN sStatus VARCHAR(20)) BEGIN INSERT INTO student_attendance (student, date, status) VALUES (sName, sDate, sStatus); END;'
         );
+        DB::unprepared(
+            'DROP PROCEDURE IF EXISTS UpdateAttendance;  CREATE PROCEDURE UpdateAttendance(IN sName VARCHAR(50), IN sDate DATE, IN sStatus VARCHAR(20)) BEGIN UPDATE student_attendance SET student = sName, date = sDate, status = sStatus; END;'
+        );
 
     }
 
