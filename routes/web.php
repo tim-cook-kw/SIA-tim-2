@@ -73,14 +73,9 @@ Route::get('/dashboard/admin/studentattendencereport', 'AttendanceController@ind
 Route::get('/dashboard/admin/addstudentattendence', 'AttendanceController@addAdmin');
 Route::get('/dashboard/admin/editstudentattendence/{id}', 'AttendanceController@addAdmin');
 Route::get('/dashboard/student/attendence', 'AttendanceController@indexStudent');
-Route::post('/dashboard/admin/saveeditstudentattendence/{id}', '');
+// Route::post('/dashboard/admin/saveeditstudentattendence/{id}', '');
 Route::post('/dashboard/admin/savestudentattendence', 'AttendanceController@saveAdmin');
 
-
-
-//student
-
-Route::get('/dashboard/student/attendencedetail', function() {
 
 Route::get('/admin/teacherattendencereport', function () {
     return view('teacher.attendence-report');
