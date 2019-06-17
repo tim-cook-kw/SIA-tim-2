@@ -49,7 +49,30 @@
 												<h6>PERCENTAGE</h6>
 											</div>
 											<div class="clearfix"></div>
-										</div>
+                                        </div>
+                                        @foreach ($studentatt as $att)
+
+                                        <div class="tbl-row">
+											<div class="col-xs-4">
+												<h6>Basic Math (MTH101)</h6>
+											</div>
+											<div class="col-xs-2">
+												<h6>{{ $att->date }}</h6>
+											</div>
+											<div class="col-xs-2">
+												<h6>30</h6>
+											</div>
+											<div class="col-xs-2">
+												<h6>25</h6>
+											</div>
+											<div class="col-xs-2">
+												<h6>{{ $att->status }}</h6>
+											</div>
+											<div class="clearfix"></div>
+                                        </div>
+
+                                        @endforeach
+
 										<div class="tbl-row">
 											<div class="col-xs-4">
 												<h6>Basic Math (MTH101)</h6>
@@ -67,7 +90,8 @@
 												<h6>83.30%</h6>
 											</div>
 											<div class="clearfix"></div>
-										</div>
+                                        </div>
+
 										<div class="tbl-row">
 											<div class="col-xs-4">
 												<h6>Gravitation (PHY201)</h6>

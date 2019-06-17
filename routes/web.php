@@ -17,10 +17,12 @@
 
 Route::get('/', function () {
     return view('login.login');
+
 });
 
 Route::get('/welcome', function () {
     return view('welcome');
+
 });
 
 Auth::routes();
@@ -66,6 +68,20 @@ Route::get('/admin/createtimetable', function () {
     return view('admin.create-timetable');
 });
 
+
+Route::get('/dashboard/admin/studentattendencereport', 'AttendanceController@indexAdmin');
+Route::get('/dashboard/admin/addstudentattendence', 'AttendanceController@addAdmin');
+Route::get('/dashboard/admin/editstudentattendence/{id}', 'AttendanceController@addAdmin');
+Route::get('/dashboard/student/attendence', 'AttendanceController@indexStudent');
+Route::post('/dashboard/admin/saveeditstudentattendence/{id}', '');
+Route::post('/dashboard/admin/savestudentattendence', 'AttendanceController@saveAdmin');
+
+
+
+//student
+
+Route::get('/dashboard/student/attendencedetail', function() {
+
 Route::get('/admin/teacherattendencereport', function () {
     return view('teacher.attendence-report');
 });
@@ -76,6 +92,7 @@ Route::get('/student/attendence', function() {
     return view('student.attendence');
 });
 Route::get('/student/attendencedetail', function() {
+
     return view('student.attendence-detailed');
 });
 Route::get('/student/assignmentdownload', function() {
@@ -132,6 +149,16 @@ Route::get('/teacher/viewstudentmarks', function() {
     return view('teacher.view-student-marks');
 });
 
+
+Route::get('/dashboard/admin/login/', function() {
+    return view('login.login');
+});
+
 Route::get('/login2', function() {
     return view('login.login');
 });
+
+Route::get('/login2', function() {
+    return view('login.login');
+});
+
