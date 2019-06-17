@@ -13,14 +13,24 @@ class CreateStudentDatabaseTable extends Migration
      */
     public function up()
     {
-        Schema::create('student_database', function (Blueprint $table) {
+        Schema::create('Students', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('first_name');
-            $table->string('last_name');
-            $table->string('phone_number');
-            $table->string('first_name');
-            $table->string('gender')->unique();
-            $table->string('religion');
+            $table->string('student_first_name');
+            $table->string('student_last_name');
+            $table->string('student_nick_name');
+            $table->string('gender');
+            $table->string('student_place_of_birth');
+            $table->string('student_day_birth');
+            $table->string('student_month_birth');
+            $table->string('student_year_birth');
+            $table->string('student_phone');
+            $table->string('student_email');
+            $table->string('student_religion');
+            $table->string('student_nasionality');
+            $table->string('student_address');
+            $table->string('student_country');
+            $table->string('student_state');
+            $table->string('student_zip');
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();

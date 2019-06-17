@@ -9,10 +9,10 @@
 						</a>
 						<ul class="dropdown-menu">
 							<li>
-								<a href="addstudent"><i class="fa fa-caret-right"></i>ADD</a>
+								<a href="addStudent"><i class="fa fa-caret-right"></i>ADD</a>
 							</li>
 							<li>
-								<a href="studentlist"><i class="fa fa-caret-right"></i>ALL STUDENT  </a>
+								<a href="showStudent"><i class="fa fa-caret-right"></i>ALL STUDENT  </a>
 							</li>
 						</ul>
 						<div class="clearfix"></div>

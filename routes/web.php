@@ -32,12 +32,18 @@ Route::get('/student', 'StudentController@index')->name('student')->middleware('
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+//admin add student
+Route::get('/admin/showStudent','AddStudentController@showStudent')->name('showStudent');
+Route::get('/admin/addStudent','AddStudentController@addStudentForm');
+Route::post('/admin/addStudent','AddStudentController@addStudent')->name('addStudent');
+
+// admin
 Route::get('/admin/dashboard', function () {
     return view('admin.dashboard');
 });
-Route::get('/admin/addstudent', function () {
-    return view('admin.add-student');
-});
+//Route::get('/admin/allstudent', function () {
+//    return view('admin.all-student');
+//});
 Route::get('/admin/addteacher', function () {
     return view('admin.add-student');
 });

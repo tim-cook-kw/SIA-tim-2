@@ -3,56 +3,44 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Students;
 
 class AddStudentController extends Controller
 {
-    //protected $redirectTo = '/admin/allstudent';
-    protected $redirectTo = '/admin/dashboard';
-
-    public function __construct()
-    {
-        $this->middleware('guest');
+    public function addStudentForm() {
+        return view('admin.add-student');
     }
 
-    protected function validator(array $data)
-    {
-        return Validator::make($data, [
-            //student data
-            'first_name' => ['required', 'string', 'max:255'],
-            'last_name' => ['required', 'string', 'max:255'],
-            'day_birth' => ['required', 'string', 'min:8'],
-            'month_birth' => ['required', 'string', 'min:8'],
-            'year_birth' => ['required', 'string', 'min:8'],
-            'phone' => ['required', 'string', 'min:12'],
-            'email' => ['required', 'string', 'email', 'max:255'],
+    public function addStudent(Request $request) {
+        $addStudent = new Students();
+ 
+        $addStudent->student_first_name = request('student_first_name');
+        $addStudent->student_last_name = request('student_last_name');
+        $addStudent->student_nick_name = request('student_nick_name');
+        $addStudent->gender = request('gender');
+        $addStudent->student_place_of_birth = request('student_place_of_birth');
+        $addStudent->student_day_birth = request('student_day_birth');
+        $addStudent->student_month_birth = request('student_month_birth');
+        $addStudent->student_year_birth = request('student_year_birth');
+        $addStudent->student_phone = request('student_phone');
+        $addStudent->student_email = request('student_email');
+        $addStudent->student_religion = request('student_religion');
+        $addStudent->student_nasionality = request('student_nasionality');
+        $addStudent->student_address = request('student_address');
+        $addStudent->student_country = request('student_country');
+        $addStudent->student_state = request('student_state');
+        $addStudent->student_zip = request('student_zip');
+ 
+        $addStudent->save();
+ 
+        return redirect('/admin/showStudent');
+     }
 
-            //parent data
-            'father_name' => ['required', 'string', 'max:255'],
-            'mother_name' => ['required', 'string', 'max:255'],
-            'occupation' => ['required', 'string', 'max:255'],
-            'parent_phone' => ['required', 'string', 'min:12'],
-        ]);
-    }
-
-    protected function create(array $data)
-    {
-        return User::create([
-            //student data
-            'first_name' => $data['first_name'],
-            'last_name' => $data['last_name'],
-            'gender' => $data['gender'],
-            'day_birth' => $data['day_birth'],
-            'month_birth' => $data['month_birth'],
-            'year_birth' => $data['year_birth'],
-            'student_phone' => $data['student_phone'],
-            'email' => $data['email'],
-            'religion' => $data['religion'],
-
-            //parent data
-            'father_name' => $data['father_name'],
-            'mother_name' => $data['mother_name'],
-            'occupation' => $data['occupation'],
-            'father_phone' => $data['father_phone'],
-        ]);
+    public function showStudent(){
+ 
+        $addStudent = Students::all();
+ 
+        return view('admin.all-student');
     }
 }
