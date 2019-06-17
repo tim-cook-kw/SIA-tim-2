@@ -16,6 +16,29 @@
 
                     Hello, Admin
                     You are logged in!
+<<<<<<< HEAD
+=======
+
+
+                    <table class="table table-bordered table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Name</th>
+                                <th>Role</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($user as $p)
+                                <tr>
+                                    <td>{{ $p->id}}</td>
+                                    <td>{{ $p->name }}</td>
+                                    <td>{{ $p->role }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+>>>>>>> 46dff0d07655cfecc9d2f8bf2db6480ccfc570d0
                 </div>
             </div>
         </div>

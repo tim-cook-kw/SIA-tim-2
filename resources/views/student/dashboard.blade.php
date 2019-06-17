@@ -238,6 +238,7 @@
 										<ul class="nav nav-tabs">
 											<li class="active">
 												<a  href="#1" data-toggle="tab"><i class="fa fa-graduation-cap"></i><span>ACADEMICS</span></a>
+<<<<<<< HEAD
 										</ul>
 										<div class="tab-content">
 										@foreach( $news as $n )
@@ -253,6 +254,47 @@
 												</div>
 											</div>
 											@endforeach
+=======
+											</li>
+											<li>								
+												<a href="#2" data-toggle="tab"><i class="fa fa-users"></i><span>ADMISSIONS</span></a>
+											</li>
+											<li>								
+												<a href="#3" data-toggle="tab"><i class="fa fa-trophy"></i><span>SPORTS</span></a>
+											</li>
+										</ul>
+										<div class="tab-content">
+											<div class="tab-pane active" id="1">
+												<div class="announcement-item">
+													<h5>Guest lecture on fine arts by Smith.<span class="new">New</span></h5>
+													<h6><i class="fa fa-clock-o"></i>06-24-2017, 13:34</h6>
+													<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+													<div class="posted-by">
+														<p>Thanks,</p>
+														<h6>John Doe, Principal</h6>
+													</div>
+												</div>
+												<div class="announcement-item">
+													<h5>Guest lecture on fine arts by Smith</h5>
+													<h6><i class="fa fa-clock-o"></i>06-24-2017, 13:34</h6>
+													<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+													<div class="posted-by">
+														<p>Thanks,</p>
+														<h6>John Doe, Principal</h6>
+													</div>
+												</div>
+											</div>
+											<div class="tab-pane" id="2">
+												<div class="announcement-item">
+													<h5>2</h5>
+												</div>
+											</div>
+											<div class="tab-pane" id="3">
+												<div class="announcement-item">
+													<h5>3</h5>
+												</div>
+											</div>
+>>>>>>> 46dff0d07655cfecc9d2f8bf2db6480ccfc570d0
 										</div>
 									</div>
 								</div>
