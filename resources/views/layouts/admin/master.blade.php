@@ -48,6 +48,8 @@
 		<script src="{{ asset('/dashboard/admin/assets/plugins/dataTables.responsive.min.js') }}"></script>
         <script src="{{ asset('/dashboard/admin/assets/js/js.js') }}"></script>
 
+
+
     </body>
 
 </html>

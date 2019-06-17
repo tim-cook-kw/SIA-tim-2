@@ -116,21 +116,21 @@
 						</a>
 						<ul class="dropdown-menu notification-list">
 							<li>
-								<a href="#"><i class="fa fa-cogs"></i> SETTINGS</a>
-							</li>
-							<li>
 								<a href="#"><i class="fa fa-users"></i> USER PROFILE</a>
 							</li>
 							<li>
 								<a href="#"><i class="fa fa-key"></i> CHANGE PASSWORD</a>
 							</li>
 							<li>
-								<a href="#"><i class="fa fa-cogs"></i> SETTINGS</a>
-							</li>
-							<li>
-								<div class="all-notifications">
-									<a href="#">LOGOUT</a>
-								</div>
+								<a class="dropdown-item" href="{{ route('logout') }}"
+									onclick="event.preventDefault();
+									document.getElementById('logout-form').submit();">
+									{{ __('Logout') }}
+								</a>
+
+								<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+									@csrf
+								</form>
 							</li>
 						</ul>
 					</li>

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4731429c7f25ab92eaa813447a972209",
+    "content-hash": "9933d3e131730f1f452442fe1ffbb83d",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -458,6 +458,63 @@
             ],
             "description": "Highlight PHP code in terminal",
             "time": "2018-09-29T18:48:56+00:00"
+        },
+        {
+            "name": "kabbouchi/laravel-table-view",
+            "version": "v0.1.15",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KABBOUCHI/laravel-table-view.git",
+                "reference": "0267c79f50c5793246334951e1b40822cba2295f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KABBOUCHI/laravel-table-view/zipball/0267c79f50c5793246334951e1b40822cba2295f",
+                "reference": "0267c79f50c5793246334951e1b40822cba2295f",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/pagination": "~5",
+                "illuminate/support": "~5",
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "KABBOUCHI\\TableView\\TableViewServiceProvider"
+                    ],
+                    "aliases": {
+                        "TableView": "KABBOUCHI\\TableView\\Facades\\TableView"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "KABBOUCHI\\TableView\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Georges KABBOUCHI",
+                    "email": "georges.kabbouchi@gmail.com"
+                }
+            ],
+            "description": "Laravel 5 Package for easily displaying table views for Eloquent Collections.",
+            "keywords": [
+                "laravel",
+                "table",
+                "table-view",
+                "view"
+            ],
+            "time": "2019-05-13T13:01:32+00:00"
         },
         {
             "name": "laravel/framework",

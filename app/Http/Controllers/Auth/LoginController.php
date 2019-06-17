@@ -36,15 +36,15 @@ class LoginController extends Controller
                 return $this->redirectTo;
                 break;
             case 2:
-                $this->redirectTo = '/admin';
+                $this->redirectTo = '/admin/dashboard';
                 return $this->redirectTo;
                 break;
             case 3:
-                $this->redirectTo = '/teacher';
+                $this->redirectTo = '/teacher/dashboard';
                 return $this->redirectTo;
                 break;
             case 4:
-                $this->redirectTo = '/student';
+                $this->redirectTo = '/student/dashboard';
                 return $this->redirectTo;
                 break;
             default:
@@ -63,5 +63,10 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    public function showLoginForm()
+    {
+        return view('login.login');
     }
 }
