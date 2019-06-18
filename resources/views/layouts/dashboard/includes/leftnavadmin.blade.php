@@ -85,19 +85,5 @@
 						</ul>
 						<div class="clearfix"></div>
 					</li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-							<i class="fa fa-address-card menu-icon"></i> REPORTS <span class="caret"></span>
-						</a>
-						<ul class="dropdown-menu">
-							<li>
-								<a href="teacher-attendence-report.html"><i class="fa fa-caret-right"></i>ATTENDENCE</a>
-							</li>
-							<li>
-								<a href="teacher-marks-report.html"><i class="fa fa-caret-right"></i>MARKS</a>
-							</li>
-						</ul>
-						<div class="clearfix"></div>
-					</li>
 				</ul>
 			</div>

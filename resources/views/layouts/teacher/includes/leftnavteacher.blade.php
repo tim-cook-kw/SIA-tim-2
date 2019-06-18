@@ -8,7 +8,7 @@
 							<i class="fa fa-file-code-o menu-icon"></i> ASSIGNMENTS <span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu">
-							<li>							
+							<li>
 								<a href="createassignment"><i class="fa fa-caret-right"></i>CREATE</a>
 							</li>
 							<li>
@@ -22,7 +22,7 @@
 							<i class="fa fa-bar-chart menu-icon"></i> ATTENDENCE <span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu">
-							<li>							
+							<li>
 								<a href="markstudentattendence"><i class="fa fa-caret-right"></i>MARK</a>
 							</li>
 							<li>
@@ -39,7 +39,7 @@
 							<i class="fa fa-address-card menu-icon"></i> MARKS <span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu">
-							<li>							
+							<li>
 								<a href="addstudentmarks"><i class="fa fa-caret-right"></i>CREATE</a>
 							</li>
 							<li>
@@ -50,20 +50,6 @@
 					</li>
 					<li>
 						<a href="timetable"><i class="fa fa-calendar menu-icon"></i> TIME TABLE</a>
-					</li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-							<i class="fa fa-address-card menu-icon"></i> REPORTS <span class="caret"></span>
-						</a>
-						<ul class="dropdown-menu">
-							<li>							
-								<a href="attendencereport"><i class="fa fa-caret-right"></i>ATTENDENCE</a>
-							</li>
-							<li>
-								<a href="marksreport"><i class="fa fa-caret-right"></i>MARKS</a>
-							</li>
-						</ul>
-						<div class="clearfix"></div>
 					</li>
 				</ul>
 			</div>
