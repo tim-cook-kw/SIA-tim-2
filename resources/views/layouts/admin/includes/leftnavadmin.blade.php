@@ -23,10 +23,10 @@
 						</a>
 						<ul class="dropdown-menu">
 							<li>
-								<a href="addteacher"><i class="fa fa-caret-right"></i>ADD</a>
+								<a href="addTeacher"><i class="fa fa-caret-right"></i>ADD</a>
 							</li>
 							<li>
-								<a href="teacherlist"><i class="fa fa-caret-right"></i>ALL TEACHER</a>
+								<a href="showTeacher"><i class="fa fa-caret-right"></i>ALL TEACHER</a>
 							</li>
 						</ul>
 						<div class="clearfix"></div>

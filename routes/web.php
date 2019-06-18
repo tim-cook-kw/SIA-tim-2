@@ -37,6 +37,11 @@ Route::get('/admin/showStudent','AddStudentController@showStudent')->name('showS
 Route::get('/admin/addStudent','AddStudentController@addStudentForm');
 Route::post('/admin/addStudent','AddStudentController@addStudent')->name('addStudent');
 
+//admin add teacher
+Route::get('/admin/showTeacher','AddTeacherController@showTeacher')->name('showTeacher');
+Route::get('/admin/addTeacher','AddTeacherController@addTeacherForm');
+Route::post('/admin/addTeacher','AddTeacherController@addTeacher')->name('addTeacher');
+
 // admin
 Route::get('/admin/dashboard', function () {
     return view('admin.dashboard');
@@ -44,9 +49,9 @@ Route::get('/admin/dashboard', function () {
 //Route::get('/admin/allstudent', function () {
 //    return view('admin.all-student');
 //});
-Route::get('/admin/addteacher', function () {
-    return view('admin.add-student');
-});
+// Route::get('/admin/addteacher', function () {
+//     return view('admin.add-teacher');
+// });
 Route::get('/admin/addsubject', function () {
     return view('admin.add-subject');
 });

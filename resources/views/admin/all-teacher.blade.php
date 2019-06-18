@@ -4,7 +4,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-12 clear-padding-xs">
-				<h5 class="page-title"><i class="fa fa-user"></i>ALL STUDENT</h5>
+				<h5 class="page-title"><i class="fa fa-user"></i>ALL TEACHER</h5>
 				<div class="section-divider"></div>
 			</div>
 		</div>
@@ -12,7 +12,7 @@
 			<div class="col-lg-12 clear-padding-xs">
 				<div class="col-md-12">
 					<div class="dash-item first-dash-item">
-						<h6 class="item-title"><i class="fa fa-user"></i>STUDENT TABLE</h6>
+						<h6 class="item-title"><i class="fa fa-user"></i>TEACHER TABLE</h6>
 						<div class="dash-item first-dash-item">
 							<div class="inner-item">
 								<table id="attendenceDetailedTable" class="display responsive nowrap" cellspacing="0" width="100%">
@@ -27,7 +27,7 @@
 											<th><i class="fa fa-user-info"></i>DAY OF BIRTH</th>
 											<th><i class="fa fa-user-info"></i>MONTH OF BIRTH</th>
 											<th><i class="fa fa-user-info"></i>YEAR OF BIRTH</th>
-											<th><i class="fa fa-user-info"></i>STUDENT CONTACT</th>
+											<th><i class="fa fa-user-info"></i>TEACHER CONTACT</th>
 											<th><i class="fa fa-user-info"></i>EMAIL</th>
 											<th><i class="fa fa-user-info"></i>RELIGION</th>
 											<th><i class="fa fa-user-info"></i>NATIONALITY</th>
@@ -38,25 +38,25 @@
 										</tr>
 									</thead>
 									<tbody>
-										@foreach($addStudent as $i)
+										@foreach($addTeacher as $n)
 										<tr>
-											<td>{{ $i->id }}</td>
-											<td>{{ $i->student_first_name }}</td>
-											<td>{{ $i->student_last_name }}</td>
-											<td>{{ $i->student_nick_name }}</td>
-											<td>{{ $i->student_gender }}</td>
-											<td>{{ $i->student_place_of_birth }}</td>
-											<td>{{ $i->student_day_birth }}</td>
-											<td>{{ $i->student_month_birth }}</td>
-											<td>{{ $i->student_year_birth }}</td>
-											<td>{{ $i->student_phone }}</td>
-											<td>{{ $i->student_email }}</td>
-											<td>{{ $i->student_religion }}</td>
-											<td>{{ $i->student_nasionality }}</td>
-											<td>{{ $i->student_address }}</td>
-											<td>{{ $i->student_country }}</td>
-											<td>{{ $i->student_state }}</td>
-											<td>{{ $i->student_zip }}</td>
+											<td>{{ $n->id }}</td>
+											<td>{{ $n->teacher_first_name }}</td>
+											<td>{{ $n->teacher_last_name }}</td>
+											<td>{{ $n->teacher_nick_name }}</td>
+											<td>{{ $n->teacher_gender }}</td>
+											<td>{{ $n->teacher_place_of_birth }}</td>
+											<td>{{ $n->teacher_day_birth }}</td>
+											<td>{{ $n->teacher_month_birth }}</td>
+											<td>{{ $n->teacher_year_birth }}</td>
+											<td>{{ $n->teacher_phone }}</td>
+											<td>{{ $n->teacher_email }}</td>
+											<td>{{ $n->teacher_religion }}</td>
+											<td>{{ $n->teacher_nasionality }}</td>
+											<td>{{ $n->teacher_address }}</td>
+											<td>{{ $n->teacher_country }}</td>
+											<td>{{ $n->teacher_state }}</td>
+											<td>{{ $n->teacher_zip }}</td>
 										</tr>
 										@endforeach
 									</tbody>

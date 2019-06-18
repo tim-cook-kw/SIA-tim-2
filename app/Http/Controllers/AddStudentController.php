@@ -41,6 +41,6 @@ class AddStudentController extends Controller
  
         $addStudent = Students::all();
  
-        return view('admin.all-student');
+        return view('admin.all-student', ['addStudent' => $addStudent]);
     }
 }

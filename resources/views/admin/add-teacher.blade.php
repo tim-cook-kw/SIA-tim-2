@@ -1,274 +1,193 @@
 @extends('layouts.admin.master')
 @section('content')
 <div class="main-content" id="content-wrapper">
-				<div class="container-fluid">
-					<div class="row">
-						<div class="col-lg-12 clear-padding-xs">
-							<h5 class="page-title"><i class="fa fa-home"></i>HOME</h5>
-							<div class="section-divider"></div>
-							<div class="dashboard-stats">
-								<div class="col-sm-6 col-md-3">
-									<div class="stat-item">
-										<div class="stats">
-											<div class="col-xs-8 count">
-												<h1>199</h1>
-												<p>STUDENTS</p>
-											</div>
-											<div class="col-xs-4 icon">
-												<i class="fa fa-users ex-icon"></i>
-											</div>
-											<div class="clearfix"></div>
-										</div>
-										<div class="status">
-											<p class="text-ex"><i class="fa fa-pencil-square-o"></i>10 Absent Today</p>
-										</div>
-										<div class="clearfix"></div>
-									</div>
-								</div>
-								<div class="col-sm-6 col-md-3">
-									<div class="stat-item">
-										<div class="stats">
-											<div class="col-xs-8 count">
-												<h1>111</h1>
-												<p>TEACHERS</p>
-											</div>
-											<div class="col-xs-4 icon">
-												<i class="fa fa-user-secret danger-icon"></i>
-											</div>
-											<div class="clearfix"></div>
-										</div>
-										<div class="status">
-											<p class="text-danger"><i class="fa fa-exclamation-triangle"></i>5 On Leave Today</p>
-										</div>
-										<div class="clearfix"></div>
-									</div>
-								</div>
-								<div class="clearfix visible-sm"></div>
-								<div class="col-sm-6 col-md-3">
-									<div class="stat-item">
-										<div class="stats">
-											<div class="col-xs-8 count">
-												<h1>900</h1>
-												<p>EVENTS</p>
-											</div>
-											<div class="col-xs-4 icon">
-												<i class="fa fa-flag look-icon"></i>
-											</div>
-											<div class="clearfix"></div>
-										</div>
-										<div class="status">
-											<p class="text-look"><i class="fa fa-clock-o"></i>1 Event tomorrow</p>
-										</div>
-										<div class="clearfix"></div>
-									</div>
-								</div>
-								<div class="col-sm-6 col-md-3">
-									<div class="stat-item">
-										<div class="stats">
-											<div class="col-xs-8 count">
-												<h1>799</h1>
-												<p>MESSAGES</p>
-											</div>
-											<div class="col-xs-4 icon">
-												<i class="fa fa-envelope-o success-icon"></i>
-											</div>
-											<div class="clearfix"></div>
-										</div>
-										<div class="status">
-											<p class="text-success"><i class="fa fa-folder-open-o"></i>10 Unread messages</p>
-										</div>
-										<div class="clearfix"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-lg-12 clear-padding-xs">
-							<div class="col-sm-8">
-								<div>
-									<div class="my-msg dash-item">
-										<h6 class="item-title"><i class="fa fa-bar-chart"></i>STUDENT ATTENDENCE TREND</h6>
-										<div class="inner-item">
-											<div class="summary-chart">
-												<canvas id="studentAttendenceLine" height="100px"></canvas>
-												<div class="chart-legends">
-													<span class="red">ABSENT</span>
-													<span class="orange">ON LEAVE</span>
-													<span class="green">PRESENT</span>
-												</div>
-												<div class="chart-title">
-													<h6 class="bottom-title">STUDENT ATTENDENCE TREND</h6>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-4">
-								<div>
-									<div class="my-msg dash-item">
-										<h6 class="item-title"><i class="fa fa-calendar"></i>TODAY'S TASK</h6>
-										<div class="inner-item">
-											<div class="timetable-item">
-												<div class="col-xs-3 clear-padding">
-													<p><span class="time">10 AM</span></p>
-												</div>
-												<div class="col-xs-9">
-													<p class="title">Teacher Meeting</p>
-													<p class="sent-by"><i class="fa fa-map-marker"></i> ROOM NO - 601</p>
-												</div>
-												<div class="clearfix"></div>
-											</div>
-											<div class="timetable-item">
-												<div class="col-xs-3 clear-padding">
-													<p><span class="time">11 AM</span></p>
-												</div>
-												<div class="col-xs-9">
-													<p class="title">Campus Tour</p>
-													<p class="sent-by"><i class="fa fa-map-marker"></i> CAMPUS</p>
-
-												</div>
-												<div class="clearfix"></div>
-											</div>
-											<div class="timetable-item">
-												<div class="col-xs-3 clear-padding">
-													<p><span class="time">12 PM</span></p>
-												</div>
-												<div class="col-xs-9">
-													<p class="title">Parent Meeting</p>
-													<p class="sent-by"><i class="fa fa-map-marker"></i> ROOM NO - 601</p>
-
-												</div>
-												<div class="clearfix"></div>
-											</div>
-											<div class="timetable-item">
-												<div class="col-xs-3 clear-padding">
-													<p><span class="time">01 PM</span></p>
-												</div>
-												<div class="col-xs-9">
-													<p class="title">Guest Lecture</p>
-													<p class="sent-by"><i class="fa fa-map-marker"></i> ROOM NO - 601</p>
-
-												</div>
-												<div class="clearfix"></div>
-											</div>
-											<div class="timetable-item">
-												<div class="col-xs-3 clear-padding">
-													<p><span class="time">02 PM</span></p>
-												</div>
-												<div class="col-xs-9">
-													<p class="title">Teacher Meeting</p>
-													<p class="sent-by"><i class="fa fa-map-marker"></i> ROOM NO - 601</p>
-												</div>
-												<div class="clearfix"></div>
-											</div>
-
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-lg-12 clear-padding-xs">
-							<div class="col-sm-8">
-								<div>
-									<div class="my-msg dash-item">
-										<h6 class="item-title"><i class="fa fa-bar-chart"></i>TODAY'S STUDENT ATTENDENCE</h6>
-										<div class="inner-item">
-											<div class="summary-chart">
-												<canvas id="studentAttendenceBar" height="100px"></canvas>
-												<div class="chart-legends">
-													<span class="red">ABSENT</span>
-													<span class="orange">ON LEAVE</span>
-													<span class="green">PRESENT</span>
-												</div>
-												<div class="chart-title">
-													<h6 class="bottom-title">STUDENT ATTENDENCE BAR</h6>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div>
-									<div class="my-msg dash-item">
-										<h6 class="item-title"><i class="fa fa-pie-chart"></i>TEACHER ATTENDENCE</h6>
-										<div class="chart-item">
-											<canvas id="studentPie" height = 250px></canvas>
-											<div class="chart-legends">
-												<span class="red">ABSENT</span>
-												<span class="orange">PRESENT</span>
-												<span class="green">LEAVE</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-lg-12 clear-padding-xs">
-							<div class="col-md-12">
-								<div class="my-msg dash-item">
-									<h6 class="item-title"><i class="fa fa-bullhorn"></i>ANNOUNCEMENTS</h6>
-									<div class="inner-item dashboard-tabs">
-										<ul class="nav nav-tabs">
-											<li class="active">
-												<a  href="#1" data-toggle="tab"><i class="fa fa-graduation-cap"></i><span>ACADEMICS</span></a>
-											</li>
-											<li>
-												<a href="#2" data-toggle="tab"><i class="fa fa-users"></i><span>ADMISSIONS</span></a>
-											</li>
-											<li>
-												<a href="#3" data-toggle="tab"><i class="fa fa-trophy"></i><span>SPORTS</span></a>
-											</li>
-										</ul>
-										<div class="tab-content">
-											<div class="tab-pane active" id="1">
-												<div class="announcement-item">
-													<h5>Guest lecture on fine arts by Smith.<span class="new">New</span></h5>
-													<h6><i class="fa fa-clock-o"></i>06-24-2017, 13:34</h6>
-													<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-													<div class="posted-by">
-														<p>Thanks,</p>
-														<h6>John Doe, Principal</h6>
-													</div>
-												</div>
-												<div class="announcement-item">
-													<h5>Guest lecture on fine arts by Smith</h5>
-													<h6><i class="fa fa-clock-o"></i>06-24-2017, 13:34</h6>
-													<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-													<div class="posted-by">
-														<p>Thanks,</p>
-														<h6>John Doe, Principal</h6>
-													</div>
-												</div>
-											</div>
-											<div class="tab-pane" id="2">
-												<div class="announcement-item">
-													<h5>2</h5>
-												</div>
-											</div>
-											<div class="tab-pane" id="3">
-												<div class="announcement-item">
-													<h5>3</h5>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="menu-togggle-btn">
-					<a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars" style="margin-right: 10px;"></i></a>
-				</div>
-				<div class="dash-footer col-lg-12">
-					<p>Copyright Pathshala</p>
-				</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-12 clear-padding-xs">
+				<h5 class="page-title"><i class="fa fa-user"></i>ADD TEACHER</h5>
+				<div class="section-divider"></div>
 			</div>
+		</div>
+		<div class="row">
+			<form method="POST" action="{{ route('addTeacher') }}">
+				@csrf
+				<div class="col-lg-12 clear-padding-xs">
+					<div class="col-md-12">
+						<div class="dash-item first-dash-item">
+							<h6 class="item-title"><i class="fa fa-user"></i>TEACHER INFO</h6>
+							<div class="inner-item">
+								<div class="dash-form">
+									<div class="col-sm-3">
+										<label class="clear-top-margin"><i class="fa fa-user-circle-o"></i>FIRST NAME</label>
+										<input id="teacher_first_name" type="text" class="form-control @error('teacher_first_name') is-invalid @enderror" name="teacher_first_name" value="{{ old('teacher_first_name') }}" required autocomplete="teacher_first_name">
+										@error('teacher_first_name')
+										<span class="invalid-feedback" role="alert">
+											<strong>{{ $message }}</strong>
+										</span>
+										@enderror
+									</div>
+									<div class="col-sm-3">
+										<label class="clear-top-margin"><i class="fa fa-user-circle-o"></i>LAST NAME</label>
+										<input id="teacher_last_name" type="text" class="form-control @error('teacher_last_name') is-invalid @enderror" name="teacher_last_name" value="{{ old('teacher_last_name') }}" required autocomplete="teacher_last_name">
+										@error('teacher_last_name')
+										<span class="invalid-feedback" role="alert">
+											<strong>{{ $message }}</strong>
+										</span>
+										@enderror
+									</div>
+									<div class="col-sm-3">
+										<label class="clear-top-margin"><i class="fa fa-user-circle-o"></i>NICK NAME</label>
+										<input id="teacher_nick_name" type="text" class="form-control @error('teacher_nick_name') is-invalid @enderror" name="teacher_nick_name" value="{{ old('teacher_nick_name') }}" required autocomplete="teacher_nick_name">
+										@error('teacher_nick_name')
+										<span class="invalid-feedback" role="alert">
+											<strong>{{ $message }}</strong>
+										</span>
+										@enderror
+									</div>
+									<div class="col-sm-3">
+										<label class="clear-top-margin"><i class="fa fa-venus"></i>GENDER</label>
+										<select name="gender">
+											<option value="Male">Male</option>
+											<option value="Female">Female</option>
+										</select>
+									</div>
+									<div class="clearfix"></div>
+									<div class="col-sm-3">
+										<label class="clear-top-margin"><i class="fa fa-user-circle-o"></i>PLACE OF BIRTH</label>
+										<input id="teacher_place_of_birth" type="text" class="form-control @error('teacher_place_of_birth') is-invalid @enderror" name="teacher_place_of_birth" value="{{ old('teacher_place_of_birth') }}" required autocomplete="teacher_place_of_birth">
+										@error('teacher_place_of_birth')
+										<span class="invalid-feedback" role="alert">
+											<strong>{{ $message }}</strong>
+										</span>
+										@enderror
+									</div>
+									<div class="col-sm-3">
+										<label class="clear-top-margin"><i class="fa fa-user-circle-o"></i>DAY OF BIRTH</label>
+										<select name="teacher_day_birth">
+											@foreach(range(1,31) as $day)
+											<option value="{{strlen($day)==1 ? '0'.$day : $day}}">
+												{{strlen($day)==1 ? '0'.$day : $day}}
+											</option>
+											@endforeach
+										</select>
+									</div>
+									<div class="col-sm-3">
+										<label class="clear-top-margin"><i class="fa fa-user-circle-o"></i>MONTH OF BIRTH</label>
+										<select name="teacher_month_birth">
+											@foreach(range(1,12) as $month)
+											<option value="{{$month}}">
+												{{date("M", strtotime('2016-'.$month))}}
+											</option>
+											@endforeach
+										</select>
+									</div>
+									<div class="col-sm-3">
+										<label class="clear-top-margin"><i class="fa fa-user-circle-o"></i>YEAR OF BIRTH</label>
+										<select name="teacher_year_birth">
+											@for ($year = date('Y'); $year > date('Y') - 100; $year--)
+											<option value="{{$year}}">
+												{{$year}}
+											</option>
+											@endfor
+										</select>
+
+									</div>
+									<div class="clearfix"></div>
+									<div class="col-sm-3">
+										<label><i class="fa fa-phone"></i>TEACHER CONTACT</label>
+										<input id="teacher_phone" type="text" class="form-control @error('teacher_phone') is-invalid @enderror" name="teacher_phone" value="{{ old('teacher_phone') }}" required autocomplete="teacher_phone">
+										@error('teacher_phone')
+										<span class="invalid-feedback" role="alert">
+											<strong>{{ $message }}</strong>
+										</span>
+										@enderror
+									</div>
+									<div class="col-sm-3">
+										<label><i class="fa fa-envelope-o"></i>EMAIL</label>
+										<input id="teacher_email" type="text" class="form-control @error('teacher_email') is-invalid @enderror" name="teacher_email" value="{{ old('teacher_email') }}" required autocomplete="teacher_email">
+										@error('teacher_email')
+										<span class="invalid-feedback" role="alert">
+											<strong>{{ $message }}</strong>
+										</span>
+										@enderror
+									</div>
+									<div class="col-sm-3">
+										<label><i class="fa fa-bell-o"></i>RELIGION</label>
+										<select name="teacher_religion">
+											<option value="islam">Islam</option>
+											<option value="buddhism">Buddhism</option>
+											<option value="christian">Christian</option>
+											<option value="protestant">Protestant</option>
+											<option value="hinduism">Hinduism</option>
+											<option value="kong hu cu">Kong Hu Cu</option>
+										</select>
+									</div>
+									<div class="col-sm-3">
+										<label><i class="fa fa-flag"></i>NATIONALITY</label>
+										<input id="teacher_nasionality" type="text" class="form-control @error('teacher_nasionality') is-invalid @enderror" name="teacher_nasionality" value="{{ old('teacher_nasionality') }}" required autocomplete="teacher_nasionality">
+										@error('teacher_nasionality')
+										<span class="invalid-feedback" role="alert">
+											<strong>{{ $message }}</strong>
+										</span>
+										@enderror
+									</div>
+									<div class="clearfix"></div>
+									<div class="col-sm-3">
+										<label><i class="fa fa-home"></i>ADDRESS</label>
+										<input id="teacher_address" type="text" class="form-control @error('teacher_address') is-invalid @enderror" name="teacher_address" value="{{ old('teacher_address') }}" required autocomplete="teacher_address">
+										@error('teacher_address')
+										<span class="invalid-feedback" role="alert">
+											<strong>{{ $message }}</strong>
+										</span>
+										@enderror
+									</div>
+									<div class="col-sm-3">
+										<label><i class="fa fa-flag"></i>COUNTRY</label>
+										<input id="teacher_country" type="text" class="form-control @error('teacher_country') is-invalid @enderror" name="teacher_country" value="{{ old('teacher_country') }}" required autocomplete="teacher_country">
+										@error('teacher_country')
+										<span class="invalid-feedback" role="alert">
+											<strong>{{ $message }}</strong>
+										</span>
+										@enderror
+									</div>
+									<div class="col-sm-3">
+										<label><i class="fa fa-id-card"></i>STATE</label>
+										<input id="teacher_state" type="text" class="form-control @error('teacher_state') is-invalid @enderror" name="teacher_state" value="{{ old('teacher_state') }}" required autocomplete="teacher_state">
+										@error('teacher_state')
+										<span class="invalid-feedback" role="alert">
+											<strong>{{ $message }}</strong>
+										</span>
+										@enderror
+									</div>
+									<div class="col-sm-3">
+										<label><i class="fa fa-code"></i>ZIP</label>
+										<input id="teacher_zip" type="text" class="form-control @error('teacher_zip') is-invalid @enderror" name="teacher_zip" value="{{ old('teacher_zip') }}" required autocomplete="teacher_zip">
+										@error('teacher_zip')
+										<span class="invalid-feedback" role="alert">
+											<strong>{{ $message }}</strong>
+										</span>
+										@enderror
+									</div>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-12">
+					<br>
+					<input type="submit" class="btn btn-primary" value="Add Teacher">
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="menu-togggle-btn">
+		<a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars" style="margin-right: 10px;"></i></a>
+	</div>
+	<div class="dash-footer col-lg-12">
+		<p>Copyright Pathshala</p>
+	</div>
+</div>
 @endsection
