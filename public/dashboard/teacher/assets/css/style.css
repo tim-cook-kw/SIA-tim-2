@@ -182,7 +182,7 @@ html, body {
 .user li a {
 	font-size: 11px;
 	font-weight: 700;
-	color: #07253F !important; 
+	color: #07253F !important;
 	padding: 15px;
 }
 .user li a i {
@@ -488,12 +488,14 @@ html, body {
 .menu-togggle-btn {
 	position: absolute;
 	top: 5px;
-	z-index: 10000;
+    z-index: 10000;
+    display: none;
 }
 .menu-togggle-btn a {
 	color: #fff;
 	padding: 5px 10px;
-	background: #27AE60;
+    background: #27AE60;
+    display: none;
 }
 @media(min-width:768px) {
     .parent-wrapper {
@@ -674,7 +676,7 @@ html, body {
 .item-header {
 	padding: 0 0 15px;
 	border-bottom: 1px solid #eee;
-} 	
+}
 .item-header h6 {
 	margin: 0;
 	font-weight: 700;
@@ -785,7 +787,7 @@ table.dataTable thead th {
     position: relative;
     background-image: none !important;
 }
- 
+
 table.dataTable thead th.sorting:after,
 table.dataTable thead th.sorting_asc:after,
 table.dataTable thead th.sorting_desc:after {

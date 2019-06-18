@@ -27,7 +27,7 @@
         @include('layouts.admin.includes.topnav')
         <!-- End of Header-->
 
-        <div class="parent-wrapper" id="outer-wrapper">
+        <div class="parent-wrapper toggled" id="outer-wrapper">
             <!-- SIDE MENU -->
             @include('layouts.admin.includes.leftnavadmin')
             <!-- End of Side -->
