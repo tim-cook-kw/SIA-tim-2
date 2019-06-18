@@ -36,17 +36,6 @@ class LoginController extends Controller
                 return $this->redirectTo;
                 break;
             case 2:
-<<<<<<< HEAD
-                $this->redirectTo = '/admin';
-                return $this->redirectTo;
-                break;
-            case 3:
-                $this->redirectTo = '/teacher';
-                return $this->redirectTo;
-                break;
-            case 4:
-                $this->redirectTo = '/student';
-=======
                 $this->redirectTo = '/admin/dashboard';
                 return $this->redirectTo;
                 break;
@@ -56,7 +45,6 @@ class LoginController extends Controller
                 break;
             case 4:
                 $this->redirectTo = '/student/dashboard';
->>>>>>> 46dff0d07655cfecc9d2f8bf2db6480ccfc570d0
                 return $this->redirectTo;
                 break;
             default:
@@ -76,12 +64,9 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
-<<<<<<< HEAD
-=======
 
     public function showLoginForm()
     {
         return view('login.login');
     }
->>>>>>> 46dff0d07655cfecc9d2f8bf2db6480ccfc570d0
 }
