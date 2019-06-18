@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
+    "content-hash": "4731429c7f25ab92eaa813447a972209",
+=======
     "content-hash": "9933d3e131730f1f452442fe1ffbb83d",
+>>>>>>> 46dff0d07655cfecc9d2f8bf2db6480ccfc570d0
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -460,6 +464,8 @@
             "time": "2018-09-29T18:48:56+00:00"
         },
         {
+<<<<<<< HEAD
+=======
             "name": "kabbouchi/laravel-table-view",
             "version": "v0.1.15",
             "source": {
@@ -517,6 +523,7 @@
             "time": "2019-05-13T13:01:32+00:00"
         },
         {
+>>>>>>> 46dff0d07655cfecc9d2f8bf2db6480ccfc570d0
             "name": "laravel/framework",
             "version": "v5.8.15",
             "source": {

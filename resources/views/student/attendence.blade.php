@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+@extends('layouts.admin.master')
+=======
 @extends('layouts.student.master')
+>>>>>>> 46dff0d07655cfecc9d2f8bf2db6480ccfc570d0
 @section('content')
 <div class="main-content" id="content-wrapper">
 				<div class="container-fluid">
@@ -49,6 +53,9 @@
 												<h6>PERCENTAGE</h6>
 											</div>
 											<div class="clearfix"></div>
+<<<<<<< HEAD
+										</div>
+=======
                                         </div>
                                         @foreach ($studentatt as $att)
 
@@ -73,6 +80,7 @@
 
                                         @endforeach
 
+>>>>>>> 46dff0d07655cfecc9d2f8bf2db6480ccfc570d0
 										<div class="tbl-row">
 											<div class="col-xs-4">
 												<h6>Basic Math (MTH101)</h6>
@@ -90,8 +98,12 @@
 												<h6>83.30%</h6>
 											</div>
 											<div class="clearfix"></div>
+<<<<<<< HEAD
+										</div>
+=======
                                         </div>
 
+>>>>>>> 46dff0d07655cfecc9d2f8bf2db6480ccfc570d0
 										<div class="tbl-row">
 											<div class="col-xs-4">
 												<h6>Gravitation (PHY201)</h6>
@@ -195,4 +207,8 @@
 					<p>Copyright Pathshala</p>
 				</div>
             </div>
+<<<<<<< HEAD
     @endsection
+=======
+    @endsection
+>>>>>>> 46dff0d07655cfecc9d2f8bf2db6480ccfc570d0

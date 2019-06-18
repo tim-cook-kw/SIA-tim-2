@@ -4,18 +4,20 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRoleTable extends Migration
+class News extends Migration
 {
     /**
-     * Run the migrations.
+     * Run the migrations. 
      *
      * @return void
      */
     public function up()
     {
-        Schema::create('role', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('role');
+        Schema::create('news', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('subject');
+            $table->text('description');
+            $table->string('created_by');
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ class CreateRoleTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('role');
+        Schema::dropIfExists('news');
     }
 }

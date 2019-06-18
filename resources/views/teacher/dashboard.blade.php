@@ -171,6 +171,23 @@
 											<li class="active">
 												<a  href="#1" data-toggle="tab"><i class="fa fa-graduation-cap"></i><span>ACADEMICS</span></a>
 											</li>
+<<<<<<< HEAD
+										</ul>
+										<div class="tab-content">
+											@foreach( $news as $n )
+											<div class="tab-pane active" id="1">
+												<div class="announcement-item">
+													<h5>{{ $n->subject }}</h5>
+													<h6><i class="fa fa-clock-o"></i>{{ $n->created_at }}</h6>
+													<p>{{ $n->description }}</p>
+													<div class="posted-by">
+														<p>Thanks,</p>
+														<h6>{{ $n->created_by }}</h6>
+													</div>
+												</div>
+											</div>
+											@endforeach
+=======
 											<li>								
 												<a href="#2" data-toggle="tab"><i class="fa fa-users"></i><span>ADMISSIONS</span></a>
 											</li>
@@ -209,6 +226,7 @@
 													<h5>3</h5>
 												</div>
 											</div>
+>>>>>>> 46dff0d07655cfecc9d2f8bf2db6480ccfc570d0
 										</div>
 									</div>
 								</div>

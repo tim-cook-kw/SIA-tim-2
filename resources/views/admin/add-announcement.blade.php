@@ -15,6 +15,35 @@
 									<h6 class="item-title"><i class="fa fa-plus-circle"></i>ADD ANNOUNCEMENT</h6>
 									<div class="inner-item">
 										<div class="dash-form">
+<<<<<<< HEAD
+										<form method="post" action="/dashboard/admin/addannouncement/store">
+										{{ csrf_field() }}
+											<label><i class="fa fa-code"></i>SUBJECT</label>
+											<input type="text" name="subject" placeholder="Subject" />
+											@if($errors->has('subject'))
+                                				<div class="text-danger">
+                                    				{{ $errors->first('subject')}}
+                                				</div>
+                            				@endif
+											<label><i class="fa fa-info-circle"></i>DESCRIPTION</label>
+											<textarea placeholder="Enter Description Here" name="description"></textarea>
+											@if($errors->has('description'))
+                                				<div class="text-danger">
+                                    				{{ $errors->first('description')}}
+                                				</div>
+                            				@endif
+											<label><i class="fa fa-user"></i>CREATED BY</label>
+											<input type="text" name="created_by" placeholder="Created By" />
+											@if($errors->has('created_by'))
+                                				<div class="text-danger">
+                                    				{{ $errors->first('created_by')}}
+                                				</div>
+                            				@endif
+											<div>
+											<input type="submit" class="btn btn-success" value="Create">
+											</div>
+										</form>
+=======
 											<label class="clear-top-margin"><i class="fa fa-cogs"></i>TYPE</label>
 											<select>
 												<option>-- Select --</option>
@@ -36,6 +65,7 @@
 											<div>
 												<a href="#"><i class="fa fa-paper-plane"></i> CREATE</a>
 											</div>
+>>>>>>> 46dff0d07655cfecc9d2f8bf2db6480ccfc570d0
 										</div>
 										<div class="clearfix"></div>
 									</div>
@@ -49,8 +79,11 @@
 										<table id="attendenceDetailedTable" class="display responsive nowrap" cellspacing="0" width="100%">
 											<thead>
 												<tr>
+<<<<<<< HEAD
+=======
 													<th><i class="fa fa-cogs"></i>TYPE</th>
 													<th><i class="fa fa-user-secret"></i>FOR</th>
+>>>>>>> 46dff0d07655cfecc9d2f8bf2db6480ccfc570d0
 													<th><i class="fa fa-user-info"></i>SUBJECT</th>
 													<th><i class="fa fa-info-circle"></i>DESCRIPTION</th>
 													<th><i class="fa fa-user"></i>CREATED BY</th>
@@ -58,6 +91,19 @@
 												</tr>
 											</thead>
 											<tbody>
+<<<<<<< HEAD
+												@foreach($news as $n)
+												<tr>
+													<td>{{ $n->subject }}</td>
+													<td>{{ $n->description }}</td>
+													<td>{{ $n->created_by }}</td>
+													<td class="action-link">
+														<a class="edit" href="#" title="Edit" data-toggle="modal" data-target="#editDetailModal"><i class="fa fa-edit"></i></a>
+														<a class="delete" href="/dashboard/admin/addannouncement/delete/{{ $n->id }}" title="Delete"><i class="fa fa-remove"></i></a>
+													</td>
+												</tr>
+												@endforeach
+=======
 												<tr>
 													<td>Academic</td>
 													<td>All</td>
@@ -69,6 +115,7 @@
 														<a class="delete" href="#" title="Delete" data-toggle="modal" data-target="#deleteDetailModal"><i class="fa fa-remove"></i></a>
 													</td>
 												</tr>
+>>>>>>> 46dff0d07655cfecc9d2f8bf2db6480ccfc570d0
 											</tbody>
 										</table>
 									</div>

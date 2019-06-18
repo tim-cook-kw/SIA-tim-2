@@ -16,6 +16,8 @@
 
                     Hello, Admin
                     You are logged in!
+<<<<<<< HEAD
+=======
 
 
                     <table class="table table-bordered table-hover table-striped">
@@ -36,6 +38,7 @@
                             @endforeach
                         </tbody>
                     </table>
+>>>>>>> 46dff0d07655cfecc9d2f8bf2db6480ccfc570d0
                 </div>
             </div>
         </div>
