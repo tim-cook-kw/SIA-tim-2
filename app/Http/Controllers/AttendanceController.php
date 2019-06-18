@@ -13,9 +13,9 @@ class AttendanceController extends Controller
     public function indexAdmin()
     {
         $model = new Attendance();
-            $allAdmattendance = DB::select(
-                'call SelectAllAttendance()'
-            );
+        $allAdmattendance = DB::select(
+            'call SelectAllAttendance()'
+        );
 
         return view('admin.student-attendence-list', ['attendances' => $allAdmattendance]);
     }
@@ -42,18 +42,27 @@ class AttendanceController extends Controller
         return redirect('/dashboard/admin/studentattendencereport');
         }
 
-        public function editAdmin()
+        public function editAdmin(Request $request)
     {
 
+        $model = new Attendance();
+        $idAdmattendance = DB::select(
+            'call SelectAttendanceWhereId(?)',
+            [
+                $request->route('id'),
+            ]
+        );
 
-        return view('admin.add-student-attendence');
+
+        return view('admin.edit-student-attendence', ['attendance' => $idAdmattendance]);
     }
 
     public function saveEditAdmin(Request $request){
         $model = new Attendance();
         DB::insert(
-            'call InsertAttendance(?,?,?)',
+            'call UpdateAttendance(?,?,?)',
             [
+                $request->route('id'),
                 $request->input('name'),
                 $request->input('date'),
                 $request->input('status'),
@@ -61,16 +70,28 @@ class AttendanceController extends Controller
         );
         return redirect('/dashboard/admin/studentattendencereport');
         }
+    public function deleteAdmin(Request $request)
+    {
+        $model = new Attendance();
+        $allAdmattendance = DB::select(
+            'call DeleteAttendance(?)',
+            [
+                $request->route('id'),
+            ]
+        );
+
+        return view('admin.student-attendence-list', ['attendances' => $allAdmattendance]);
+    }
 
     public function indexStudent()
     {
         $studentname = "fajar";
         $model = new Attendance();
 
-            $allStdnattendance = DB::select(
+        $allStdnattendance = DB::select(
 
-                'call SelectAllAttWhereStudentName(?)', [$studentname]
-            );
+            'call SelectAllAttWhereStudentName(?)', [$studentname]
+        );
 
         return view('student.attendence', ['studentatt' => $allStdnattendance]);
     }

@@ -1,4 +1,4 @@
-@extends('layouts.teacher.master')
+@extends('layouts.admin.master')
 @section('content')
 <div class="main-content" id="content-wrapper">
 				<div class="container-fluid">
@@ -67,8 +67,9 @@
 												<tr>
 													<th><i class="fa fa-puzzle-piece"></i>ROLL #</th>
 													<th><i class="fa fa-user"></i>STUDENT</th>
-													<th><i class="fa fa-code"></i>DATE</th>
-													<th><i class="fa fa-check"></i>STATUS</th>
+													<th><i class="fa fa-calendar"></i>DATE</th>
+                                                    <th><i class="fa fa-check"></i>STATUS</th>
+                                                    <th><i class="fa fa-cogs"></i>ACTIONS</th>
 												</tr>
 											</thead>
 											<tbody>
@@ -78,6 +79,10 @@
                                                         <td>{{ $att->student }}</td>
                                                         <td>{{ $att->date }}</td>
                                                         <td>{{ $att->status }}</td>
+                                                        <td>
+                                                        <a href="editstudentattendence/{{ $att->id }}" class="fa fa-pencil " ></a>
+                                                            <a href="deletestudentattendence/{{ $att->id }}" class="fa fa-trash " ></a>
+                                                        </td>
                                                 </tr>
                                                 @endforeach
 												{{-- <tr>
