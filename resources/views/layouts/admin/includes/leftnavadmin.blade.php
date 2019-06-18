@@ -9,17 +9,10 @@
 						</a>
 						<ul class="dropdown-menu">
 							<li>
-<<<<<<< HEAD
-								<a href="addstudent"><i class="fa fa-caret-right"></i>ADD</a>
-							</li>
-							<li>
-								<a href="studentlist"><i class="fa fa-caret-right"></i>ALL STUDENT  </a>
-=======
 								<a href="addStudent"><i class="fa fa-caret-right"></i>ADD</a>
 							</li>
 							<li>
 								<a href="showStudent"><i class="fa fa-caret-right"></i>ALL STUDENT  </a>
->>>>>>> 46dff0d07655cfecc9d2f8bf2db6480ccfc570d0
 							</li>
 						</ul>
 						<div class="clearfix"></div>
@@ -70,10 +63,10 @@
 						</a>
 						<ul class="dropdown-menu">
 							<li>
-								<a href="addsubject"><i class="fa fa-caret-right"></i>ADD</a>
+								<a href="subject"><i class="fa fa-caret-right"></i>ADD</a>
 							</li>
 							<li>
-								<a href="addsubject"><i class="fa fa-caret-right"></i>VIEW SUBJECTS</a>
+								<a href="subject"><i class="fa fa-caret-right"></i>VIEW SUBJECTS</a>
 							</li>
 						</ul>
 						<div class="clearfix"></div>

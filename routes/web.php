@@ -157,3 +157,6 @@ Route::get('/login2', function() {
     return view('login.login');
 });
 
+
+//Subject Route
+Route::resource("admin/subject", "SubjectController");

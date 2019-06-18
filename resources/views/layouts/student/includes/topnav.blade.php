@@ -116,26 +116,12 @@
 						</a>
 						<ul class="dropdown-menu notification-list">
 							<li>
-<<<<<<< HEAD
-								<a href="#"><i class="fa fa-cogs"></i> SETTINGS</a>
-							</li>
-							<li>
-=======
->>>>>>> 46dff0d07655cfecc9d2f8bf2db6480ccfc570d0
 								<a href="#"><i class="fa fa-users"></i> USER PROFILE</a>
 							</li>
 							<li>
 								<a href="#"><i class="fa fa-key"></i> CHANGE PASSWORD</a>
 							</li>
 							<li>
-<<<<<<< HEAD
-								<a href="#"><i class="fa fa-cogs"></i> SETTINGS</a>
-							</li>
-							<li>
-								<div class="all-notifications">
-									<a href="#">LOGOUT</a>
-								</div>
-=======
 								<a class="dropdown-item" href="{{ route('logout') }}"
 									onclick="event.preventDefault();
 									document.getElementById('logout-form').submit();">
@@ -145,7 +131,6 @@
 								<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
 									@csrf
 								</form>
->>>>>>> 46dff0d07655cfecc9d2f8bf2db6480ccfc570d0
 							</li>
 						</ul>
 					</li>

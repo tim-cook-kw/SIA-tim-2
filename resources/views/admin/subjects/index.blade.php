@@ -9,7 +9,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<form method="POST" action="{{ route('addStudent') }}">
+			<form method="POST">
 				@csrf
 				<div class="col-lg-12 clear-padding-xs">
 					<div class="col-md-12">
