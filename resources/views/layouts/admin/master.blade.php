@@ -7,7 +7,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="">
-        <title>Pathshala - Responsive Education Template</title>
+        <title>Pathshala</title>
 
         <!-- Styles -->
         <link href="{{ asset('/dashboard/admin/assets/css/bootstrap.min.css') }}" rel="stylesheet" media="screen">
@@ -48,12 +48,6 @@
 		<script src="{{ asset('/dashboard/admin/assets/plugins/dataTables.responsive.min.js') }}"></script>
         <script src="{{ asset('/dashboard/admin/assets/js/js.js') }}"></script>
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 46dff0d07655cfecc9d2f8bf2db6480ccfc570d0
     </body>
 
-</html>
 </html>
