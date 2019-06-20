@@ -8,20 +8,23 @@
                                         <div class="dash-item first-dash-item">
                                             <h6 class="item-title"><i class="fa fa-pencil"></i>ADD ATTENDENCE</h6>
                                             <div class="inner-item dash-form">
-                                            <form method="POST" action="/dashboard/admin/saveeditstudentattendence/{{ $attendance->id }}">
+                                                @foreach ($attendance as $att)
+
+
+                                            <form method="POST" action="/admin/attendence/{{ $att->id }}">
                                                     {{ csrf_field() }}
-                                                    {{ method_field('post') }}
+                                                    {{ method_field('put') }}
                                                 <div class="col-sm-3">
                                                         <label class="clear-top-margin"><i class="fa fa-user-circle-o"></i>STUDENT NAME</label>
-                                                <input name="name" type="text" value="{{ $attendance->student }}">
+                                                <input name="name" type="text" value="{{ $att->student }}">
                                                 </div>
                                                 <div class="col-sm-3">
                                                     <label class="clear-top-margin"><i class="fa fa-calendar"></i>DATE</label>
-                                                    <input name="date" value="{{ $attendance->date }}" id="studentDOB" placeholder="YYYY/MM/DD" class="hasDatepicker">
+                                                    <input name="date" value="{{ $att->date }}" id="studentDOB" placeholder="YYYY/MM/DD" class="hasDatepicker">
                                                 </div>
                                                 <div class="col-sm-3">
                                                         <label class="clear-top-margin"><i class="fa fa-calendar-check-o"></i>STATUS</label>
-                                                        <select name="status" value="{{ $attendance->status }}">
+                                                        <select name="status">
                                                             <option>-- Select --</option>
                                                             <option>Masuk</option>
                                                             <option>Izin</option>
@@ -31,10 +34,11 @@
                                                     <div class="clearfix"></div>
                                                 <div class="clearfix"></div>
                                                 <div class="table-action-box">
-                                                       <button type="submit" class="save"><i class="fa fa-check"></i>ADD</button>
+                                                       <button type="submit" class="save"><i class="fa fa-check"></i>Save</button>
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </form>
+                                            @endforeach
                                             </div>
                                         </div>
                                     </div>

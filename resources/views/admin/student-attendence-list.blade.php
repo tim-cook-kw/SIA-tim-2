@@ -80,8 +80,9 @@
                                                         <td>{{ $att->date }}</td>
                                                         <td>{{ $att->status }}</td>
                                                         <td>
-                                                        <a href="editstudentattendence/{{ $att->id }}" class="fa fa-pencil " ></a>
-                                                            <a href="deletestudentattendence/{{ $att->id }}" class="fa fa-trash " ></a>
+                                                        <a href="attendence/{{ $att->id }}/edit" class="fa fa-pencil " ></a>
+                                                        <a href="attendence/{{ $att->id }}/delete" class="fa fa-trash " ></a>
+                                                        </script> --}}
                                                         </td>
                                                 </tr>
                                                 @endforeach

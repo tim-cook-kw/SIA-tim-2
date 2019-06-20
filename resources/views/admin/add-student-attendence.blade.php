@@ -8,7 +8,7 @@
                                         <div class="dash-item first-dash-item">
                                             <h6 class="item-title"><i class="fa fa-pencil"></i>ADD ATTENDENCE</h6>
                                             <div class="inner-item dash-form">
-                                            <form method="POST" action="savestudentattendence">
+                                            <form method="POST" action="/admin/attendence/">
                                                     {{ csrf_field() }}
                                                     {{ method_field('post') }}
                                                 <div class="col-sm-3">
