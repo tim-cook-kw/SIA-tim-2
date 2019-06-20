@@ -13,7 +13,7 @@ class CreateStoreProsedureTable extends Migration
      */
     public function up()
     {
-        DB::unprepared('CREATE PROCEDURE allStudents() BEGIN SELECT * FROM students; END');
+        DB::unprepared('DROP PROCEDURE IF EXISTS DeleteAttendance; CREATE PROCEDURE allStudents() BEGIN SELECT * FROM students; END');
     }
 
     /**
