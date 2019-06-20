@@ -128,4 +128,18 @@ class AttendenceController extends Controller
 
         return redirect('admin/attendence');
     }
+
+
+    public function indexStudent()
+    {
+        $studentname = "fajar";
+        $model = new Attendance();
+
+        $allStdnattendance = DB::select(
+
+            'call SelectAllAttWhereStudentName(?)', [$studentname]
+        );
+
+        return view('student.attendence', ['studentatt' => $allStdnattendance]);
+    }
 }

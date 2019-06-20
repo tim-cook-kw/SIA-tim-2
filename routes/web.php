@@ -68,24 +68,13 @@ Route::get('/admin/createtimetable', function () {
     return view('admin.create-timetable');
 });
 
+//attendence
+Route::resource('/admin/attendence', 'AttendenceController');
+Route::get('/admin/attendence/{id}/delete','AttendenceController@destroy');
+Route::get('/teacher/attendence', 'AttendenceController@index');
+Route::get('/student/attendence', 'AttendenceController@indexstudent');
+//endattendence
 
-Route::get('/dashboard/admin/studentattendencereport', 'AttendanceController@indexAdmin');
-Route::get('/dashboard/admin/addstudentattendence', 'AttendanceController@addAdmin');
-Route::get('/dashboard/admin/editstudentattendence/{id}', 'AttendanceController@addAdmin');
-Route::get('/dashboard/student/attendence', 'AttendanceController@indexStudent');
-// Route::post('/dashboard/admin/saveeditstudentattendence/{id}', '');
-Route::post('/dashboard/admin/savestudentattendence', 'AttendanceController@saveAdmin');
-
-
-Route::get('/admin/teacherattendencereport', function () {
-    return view('teacher.attendence-report');
-});
-
-
-//student
-Route::get('/student/attendence', function() {
-    return view('student.attendence');
-});
 Route::get('/student/attendencedetail', function() {
 
     return view('student.attendence-detailed');
