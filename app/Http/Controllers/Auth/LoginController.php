@@ -51,9 +51,15 @@ class LoginController extends Controller
                 $this->redirectTo = '/login';
                 return $this->redirectTo;
         }
+<<<<<<< HEAD
 
         // return $next($request);
     }
+=======
+         
+        // return $next($request);
+    }  
+>>>>>>> 83a47bd00f5a987df0ef1a4ced30a726348ee6d2
 
     /**
      * Create a new controller instance.

@@ -16,7 +16,11 @@
 									<div class="inner-item">
 										<div class="dash-form">
 <<<<<<< HEAD
+<<<<<<< HEAD
 										<form method="post" action="/dashboard/admin/addannouncement/store">
+=======
+										<form method="post" action="/admin/addannouncement/store">
+>>>>>>> 83a47bd00f5a987df0ef1a4ced30a726348ee6d2
 										{{ csrf_field() }}
 											<label><i class="fa fa-code"></i>SUBJECT</label>
 											<input type="text" name="subject" placeholder="Subject" />
@@ -43,6 +47,7 @@
 											<input type="submit" class="btn btn-success" value="Create">
 											</div>
 										</form>
+<<<<<<< HEAD
 =======
 											<label class="clear-top-margin"><i class="fa fa-cogs"></i>TYPE</label>
 											<select>
@@ -66,6 +71,8 @@
 												<a href="#"><i class="fa fa-paper-plane"></i> CREATE</a>
 											</div>
 >>>>>>> 46dff0d07655cfecc9d2f8bf2db6480ccfc570d0
+=======
+>>>>>>> 83a47bd00f5a987df0ef1a4ced30a726348ee6d2
 										</div>
 										<div class="clearfix"></div>
 									</div>
@@ -80,10 +87,13 @@
 											<thead>
 												<tr>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 													<th><i class="fa fa-cogs"></i>TYPE</th>
 													<th><i class="fa fa-user-secret"></i>FOR</th>
 >>>>>>> 46dff0d07655cfecc9d2f8bf2db6480ccfc570d0
+=======
+>>>>>>> 83a47bd00f5a987df0ef1a4ced30a726348ee6d2
 													<th><i class="fa fa-user-info"></i>SUBJECT</th>
 													<th><i class="fa fa-info-circle"></i>DESCRIPTION</th>
 													<th><i class="fa fa-user"></i>CREATED BY</th>
@@ -92,6 +102,9 @@
 											</thead>
 											<tbody>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 83a47bd00f5a987df0ef1a4ced30a726348ee6d2
 												@foreach($news as $n)
 												<tr>
 													<td>{{ $n->subject }}</td>
@@ -99,6 +112,7 @@
 													<td>{{ $n->created_by }}</td>
 													<td class="action-link">
 														<a class="edit" href="#" title="Edit" data-toggle="modal" data-target="#editDetailModal"><i class="fa fa-edit"></i></a>
+<<<<<<< HEAD
 														<a class="delete" href="/dashboard/admin/addannouncement/delete/{{ $n->id }}" title="Delete"><i class="fa fa-remove"></i></a>
 													</td>
 												</tr>
@@ -116,6 +130,12 @@
 													</td>
 												</tr>
 >>>>>>> 46dff0d07655cfecc9d2f8bf2db6480ccfc570d0
+=======
+														<a class="delete" href="/admin/addannouncement/delete/{{ $n->id }}" title="Delete"><i class="fa fa-remove"></i></a>
+													</td>
+												</tr>
+												@endforeach
+>>>>>>> 83a47bd00f5a987df0ef1a4ced30a726348ee6d2
 											</tbody>
 										</table>
 									</div>
@@ -131,6 +151,7 @@
 					<p>Copyright Pathshala</p>
 				</div>
 				
+<<<<<<< HEAD
 				<!-- Delete Modal -->
 				<div id="deleteDetailModal" class="modal fade" role="dialog">
 					<div class="modal-dialog">
@@ -151,6 +172,8 @@
 					</div>
 				</div>
 				
+=======
+>>>>>>> 83a47bd00f5a987df0ef1a4ced30a726348ee6d2
 				<!--Edit details modal-->
 				<div id="editDetailModal" class="modal fade" role="dialog">
 					<div class="modal-dialog">

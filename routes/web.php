@@ -46,6 +46,14 @@ Route::get('/admin/dashboard', function () {
 //Route::get('/admin/allstudent', function () {
 //    return view('admin.all-student');
 //});
+<<<<<<< HEAD
+=======
+Route::get('/admin/addannouncement','NewsController@read');
+Route::post('/admin/addannouncement/store', 'NewsController@store');
+Route::get('/admin/addannouncement{id}', 'NewsController@edit');
+Route::get('/admin/addannouncement/delete/{id}', 'NewsController@delete');
+
+>>>>>>> 83a47bd00f5a987df0ef1a4ced30a726348ee6d2
 Route::get('/admin/addteacher', function () {
     return view('admin.add-student');
 });
@@ -58,9 +66,12 @@ Route::get('/admin/addsection', function () {
 Route::get('/admin/addclass', function () {
     return view('admin.add-class');
 });
+<<<<<<< HEAD
 Route::get('/admin/addannouncement', function () {
     return view('admin.add-announcement');
 });
+=======
+>>>>>>> 83a47bd00f5a987df0ef1a4ced30a726348ee6d2
 Route::get('/admin/classtimetable', function () {
     return view('admin.class-timetable');
 });
@@ -68,6 +79,7 @@ Route::get('/admin/createtimetable', function () {
     return view('admin.create-timetable');
 });
 
+<<<<<<< HEAD
 //attendence
 Route::resource('/admin/attendence', 'AttendenceController');
 Route::get('/admin/attendence/{id}/delete','AttendenceController@destroy');
@@ -75,6 +87,26 @@ Route::get('/teacher/attendence', 'AttendenceController@index');
 Route::get('/student/attendence', 'AttendenceController@indexstudent');
 //endattendence
 
+=======
+
+Route::get('/dashboard/admin/studentattendencereport', 'AttendanceController@indexAdmin');
+Route::get('/dashboard/admin/addstudentattendence', 'AttendanceController@addAdmin');
+Route::get('/dashboard/admin/editstudentattendence/{id}', 'AttendanceController@addAdmin');
+Route::get('/dashboard/student/attendence', 'AttendanceController@indexStudent');
+// Route::post('/dashboard/admin/saveeditstudentattendence/{id}', '');
+Route::post('/dashboard/admin/savestudentattendence', 'AttendanceController@saveAdmin');
+
+
+Route::get('/admin/teacherattendencereport', function () {
+    return view('teacher.attendence-report');
+});
+
+
+//student
+Route::get('/student/attendence', function() {
+    return view('student.attendence');
+});
+>>>>>>> 83a47bd00f5a987df0ef1a4ced30a726348ee6d2
 Route::get('/student/attendencedetail', function() {
 
     return view('student.attendence-detailed');

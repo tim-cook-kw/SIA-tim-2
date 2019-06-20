@@ -27,7 +27,11 @@ class NewsController extends Controller
             'created_by' => $request->created_by
     	]);
  
+<<<<<<< HEAD
     	return redirect('/dashboard/admin/addannouncement');
+=======
+    	return redirect('/admin/addannouncement');
+>>>>>>> 83a47bd00f5a987df0ef1a4ced30a726348ee6d2
     }
     public function edit ($id)
     {
@@ -38,7 +42,11 @@ class NewsController extends Controller
     {
         $news = News::find($id);
         $news->delete();
+<<<<<<< HEAD
         return redirect('/dashboard/admin/addannouncement');
+=======
+        return redirect('/admin/addannouncement');
+>>>>>>> 83a47bd00f5a987df0ef1a4ced30a726348ee6d2
     }
     public function readteacher()
     {
