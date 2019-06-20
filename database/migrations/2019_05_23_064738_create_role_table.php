@@ -10,7 +10,11 @@ class CreateRoleTable extends Migration
      * Run the migrations.
      *
      * @return void
+<<<<<<< HEAD
+     */
+=======
      */ 
+>>>>>>> 83a47bd00f5a987df0ef1a4ced30a726348ee6d2
     public function up()
     {
         Schema::create('role', function (Blueprint $table) {

@@ -7,6 +7,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="">
+<<<<<<< HEAD
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+=======
+>>>>>>> 83a47bd00f5a987df0ef1a4ced30a726348ee6d2
         <title>Pathshala</title>
 
         <!-- Styles -->

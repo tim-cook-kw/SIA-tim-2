@@ -18,6 +18,9 @@
                     You are logged in!
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 83a47bd00f5a987df0ef1a4ced30a726348ee6d2
 
 
                     <table class="table table-bordered table-hover table-striped">
@@ -38,7 +41,10 @@
                             @endforeach
                         </tbody>
                     </table>
+<<<<<<< HEAD
+=======
 >>>>>>> 46dff0d07655cfecc9d2f8bf2db6480ccfc570d0
+>>>>>>> 83a47bd00f5a987df0ef1a4ced30a726348ee6d2
                 </div>
             </div>
         </div>
